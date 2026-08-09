@@ -175,6 +175,17 @@
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&to 0>;
         };
+
+        space_shift: space_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPACE_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            flavor = "tap-preferred";
+        };
     };
 
     macros {
@@ -321,10 +332,10 @@
         default_layer {
             label = "QWERTY";
             bindings = <
-                &alt_q_1  &alt_w_2  &alt_e_3     &alt_r_4             &alt_t_5        &kp Y                 &kp U                &kp I        &kp O    &kp P
-                &kp A     &lt 4 S   &lt 4 D      &hrm_L LEFT_SHIFT F  &kp G           &kp H                 &hrm_r LEFT_SHIFT J  &lt 4 K      &lt 4 L  &kp SEMICOLON
-&kp LEFT_SHIFT  &kp Z     &kp X     &kp C        &kp V                &kp B           &kp N                 &kp M                &kp COMMA    &kp DOT  &ht QUESTION SLASH  &kp RIGHT_SHIFT
-                                    &lt 1 SPACE  &kp LCTRL            &kp LEFT_ALT    &ht LEFT_SHIFT SPACE  &space_mo2_to2       &lt 2 SPACE
+                &alt_q_1  &alt_w_2  &alt_e_3     &alt_r_4             &alt_t_5        &kp Y                          &kp U                &kp I        &kp O    &kp P
+                &kp A     &lt 4 S   &lt 4 D      &hrm_L LEFT_SHIFT F  &kp G           &kp H                          &hrm_r LEFT_SHIFT J  &lt 4 K      &lt 4 L  &kp SEMICOLON
+&kp LEFT_SHIFT  &kp Z     &kp X     &kp C        &kp V                &kp B           &kp N                          &kp M                &kp COMMA    &kp DOT  &ht QUESTION SLASH  &kp RIGHT_SHIFT
+                                    &lt 1 SPACE  &kp LCTRL            &kp LEFT_ALT    &space_shift LEFT_SHIFT SPACE  &space_mo2_to2       &lt 2 SPACE
             >;
         };
 
@@ -341,10 +352,10 @@
         num_navi_layer {
             label = "num, bra, navi";
             bindings = <
-        &ht MINUS PLUS      &ht AMPERSAND NUMBER_7    &ht ASTERISK NUMBER_8           &ht LEFT_PARENTHESIS NUMBER_9  &ht LESS_THAN LEFT_PARENTHESIS    &ht GREATER_THAN RIGHT_PARENTHESIS  &kp HOME    &kp UP         &kp END    &ht LC(HOME) PG_UP
-        &ht SLASH ASTERISK  &ht DOLLAR NUMBER_4       &ht PERCENT NUMBER_5            &ht CARET NUMBER_6             &ht LEFT_BRACE LEFT_BRACKET       &ht RIGHT_BRACE RIGHT_BRACKET       &kp LEFT    &kp DOWN       &kp RIGHT  &ht LC(END) PAGE_DOWN
-&trans  &kp EQUAL           &ht EXCLAMATION NUMBER_1  &ht AT_SIGN NUMBER_2            &ht HASH NUMBER_3              &kp COMMA                         &kp UNDERSCORE                      &trans      &kp LS(ENTER)  &trans     &to 0                  &trans
-                                                      &ht RIGHT_PARENTHESIS NUMBER_0  &kp DOT                        &trans                            &trans                              &space_to0  &trans
+        &ht MINUS PLUS      &ht AMPERSAND NUMBER_7    &ht ASTERISK NUMBER_8  &ht LEFT_PARENTHESIS NUMBER_9   &ht LESS_THAN LEFT_PARENTHESIS    &ht GREATER_THAN RIGHT_PARENTHESIS  &kp HOME    &kp UP         &kp END    &ht LC(HOME) PG_UP
+        &ht SLASH ASTERISK  &ht DOLLAR NUMBER_4       &ht PERCENT NUMBER_5   &ht CARET NUMBER_6              &ht LEFT_BRACE LEFT_BRACKET       &ht RIGHT_BRACE RIGHT_BRACKET       &kp LEFT    &kp DOWN       &kp RIGHT  &ht LC(END) PAGE_DOWN
+&trans  &kp EQUAL           &ht EXCLAMATION NUMBER_1  &ht AT_SIGN NUMBER_2   &ht HASH NUMBER_3               &kp COMMA                         &kp UNDERSCORE                      &trans      &kp LS(ENTER)  &trans     &to 0                  &trans
+                                                      &kp COMMA              &ht RIGHT_PARENTHESIS NUMBER_0  &kp DOT                           &trans                              &space_to0  &trans
             >;
         };
 
