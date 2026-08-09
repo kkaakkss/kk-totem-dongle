@@ -30,8 +30,8 @@ TOTEM is a 38 key column-staggered split keyboard running [ZMK](https://zmk.dev/
 - repeat this process with the right half and the `totem_right-seeeduino_xiao_ble-zmk.uf2` file.
 
 
-  ----------------------------------------------------------------------------
-  
+---
+
 
 # keymap drawer 그리기 :
 
