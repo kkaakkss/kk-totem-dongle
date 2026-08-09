@@ -13,12 +13,12 @@ layers:
   - P
   - A
   - S
-  - D
+  - {t: D, h: LSHFT}
   - {t: F, h: LSHFT}
   - G
   - H
   - {t: J, h: LSHIFT}
-  - K
+  - {t: K, h: LSHFT}
   - L
   - ;
   - LEFT SHIFT
