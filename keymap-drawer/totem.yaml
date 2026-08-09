@@ -162,33 +162,33 @@ layers:
   - F22
   - Gui+R
   - Sft+F2
-  - '`'
-  - '&'
-  - '*'
-  - (
-  - )
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Ctl+`
   - {t: Gui+1, type: held}
   - {t: Gui+2, type: held}
   - {t: Gui+3, type: held}
   - Sft+F3
-  - '['
-  - $
-  - '%'
-  - ^
-  - ']'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '&bt_in_out'
   - F21
   - F19
   - F20
   - F18
   - Gui+HOME
-  - <
-  - '!'
-  - '@'
-  - '#'
-  - '>'
-  - {t: _, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
