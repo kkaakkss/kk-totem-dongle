@@ -153,20 +153,11 @@
             keep-mods = <MOD_LALT>;
         };
 
-        as_tab: as_tab {
-            compatible = "zmk,behavior-mod-morph";
-            label = "AS_TAB";
-            bindings = <&kp TAB>, <&kp LS(LA(TAB))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL | MOD_LALT)>;
-        };
-
         space_mo2_to2: space_mo2_to2 {
             compatible = "zmk,behavior-tap-dance";
             label = "SPACE_MO2_TO2";
             #binding-cells = <0>;
-            bindings = <&lt 2 SPACE>, <&to 2>;
+            bindings = <&lt 5 SPACE>, <&to 5>;
         };
 
         space_to0: space_to0 {
@@ -185,6 +176,53 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             flavor = "tap-preferred";
+        };
+
+        dtap_to_lay2: dtap_to_lay2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DTAP_TO_LAY2";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&tog 2>;
+        };
+
+        ctrl_guard_alt_e: ctrl_guard_alt_e {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_GUARD_ALT_E";
+            bindings = <&alt_e_3>, <&kp E>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        ctrl_guard_alt_q: ctrl_guard_alt_q {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_GUARD_ALT_Q";
+            bindings = <&alt_q_1>, <&kp Q>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        ctrl_guard_alt_w: ctrl_guard_alt_w {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_GUARD_ALT_W";
+            bindings = <&alt_w_2>, <&kp W>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        ctrl_guard_alt_rwin: ctrl_guard_alt_rwin {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_GUARD_ALT_RWIN";
+            bindings = <&alt_r_4>, <&kp R>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT)>;
+            keep-mods = <(MOD_LGUI)>;
         };
     };
 
@@ -243,12 +281,6 @@
             layers = <0>;
         };
 
-        as_tab_combo {
-            bindings = <&as_tab>;
-            key-positions = <10 11>;
-            layers = <0>;
-        };
-
         caps_combo {
             bindings = <&kp CAPSLOCK>;
             key-positions = <21 22>;
@@ -268,7 +300,7 @@
         };
 
         osl_combo {
-            bindings = <&sl 3>;
+            bindings = <&sl 4>;
             key-positions = <11 12 13>;
             layers = <0>;
         };
@@ -276,25 +308,25 @@
         shift_home {
             bindings = <&kp LS(HOME)>;
             key-positions = <6 7>;
-            layers = <2>;
+            layers = <5>;
         };
 
         shift_end {
             bindings = <&kp LS(END)>;
             key-positions = <7 8>;
-            layers = <2>;
+            layers = <5>;
         };
 
         ctrl_left {
             bindings = <&kp LC(LEFT_ARROW)>;
             key-positions = <16 17>;
-            layers = <2>;
+            layers = <5>;
         };
 
         ctrl_right {
             bindings = <&kp LC(RIGHT)>;
             key-positions = <17 18>;
-            layers = <2>;
+            layers = <5>;
         };
 
         space_combo {
@@ -306,13 +338,13 @@
         tab_combo {
             bindings = <&kp TAB>;
             key-positions = <11 12>;
-            layers = <0 2>;
+            layers = <0 5>;
         };
 
         esc2_combo {
             bindings = <&kp ESCAPE>;
             key-positions = <1 2>;
-            layers = <0 2>;
+            layers = <0 5>;
         };
 
         minus_underscore {
@@ -324,6 +356,61 @@
             bindings = <&ht DOUBLE_QUOTES SINGLE_QUOTE>;
             key-positions = <18 19>;
         };
+
+        dtap_to_l2 {
+            bindings = <&dtap_to_lay2>;
+            key-positions = <11 13>;
+        };
+
+        kp {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <3 4>;
+        };
+
+        bra_R {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <5 6>;
+        };
+
+        BKT_L {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <13 14>;
+        };
+
+        BKT_R {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <15 16>;
+        };
+
+        gui_l {
+            bindings = <&kp LG(L)>;
+            key-positions = <1 2 0>;
+            layers = <0>;
+        };
+
+        shift_home_l2 {
+            bindings = <&kp LS(HOME)>;
+            key-positions = <1 2>;
+            layers = <2>;
+        };
+
+        shift_end_l2 {
+            bindings = <&kp LS(END)>;
+            key-positions = <2 3>;
+            layers = <2>;
+        };
+
+        ctrl_left_l2 {
+            bindings = <&kp LC(LEFT)>;
+            key-positions = <11 12>;
+            layers = <2>;
+        };
+
+        ctrl_righr_l2 {
+            bindings = <&kp LC(RIGHT)>;
+            key-positions = <12 13>;
+            layers = <2>;
+        };
     };
 
     keymap {
@@ -332,10 +419,10 @@
         default_layer {
             label = "QWERTY";
             bindings = <
-                &alt_q_1  &alt_w_2  &alt_e_3     &alt_r_4             &alt_t_5        &kp Y                          &kp U                &kp I        &kp O    &kp P
-                &kp A     &lt 4 S   &lt 4 D      &hrm_L LEFT_SHIFT F  &kp G           &kp H                          &hrm_r LEFT_SHIFT J  &lt 4 K      &lt 4 L  &kp SEMICOLON
-&kp LEFT_SHIFT  &kp Z     &kp X     &kp C        &kp V                &kp B           &kp N                          &kp M                &kp COMMA    &kp DOT  &ht QUESTION SLASH  &kp RIGHT_SHIFT
-                                    &lt 1 SPACE  &kp LCTRL            &kp LEFT_ALT    &space_shift LEFT_SHIFT SPACE  &space_mo2_to2       &lt 2 SPACE
+                &ctrl_guard_alt_q  &ctrl_guard_alt_w  &ctrl_guard_alt_e  &ctrl_guard_alt_rwin  &alt_t_5       &kp Y                          &kp U                &kp I           &kp O    &kp P
+                &kp A              &lt 5 S            &lt 5 D            &hrm_L LEFT_SHIFT F   &kp G          &kp H                          &hrm_r LEFT_SHIFT J  &lt 5 K         &lt 5 L  &kp SEMICOLON
+&kp LEFT_SHIFT  &kp Z              &kp X              &kp C              &kp V                 &kp B          &kp N                          &kp M                &kp COMMA       &kp DOT  &ht QUESTION SLASH  &kp RIGHT_SHIFT
+                                                      &kp LCTRL          &kp LALT              &lt 1 SPACE    &space_shift LEFT_SHIFT SPACE  &kp LEFT_SHIFT       &space_mo2_to2
             >;
         };
 
@@ -346,6 +433,16 @@
         &kp NON_US_BACKSLASH  &kp LC(S)  &kp LC(PAGE_DOWN)  &kp LC(PAGE_UP)  &none        &none   &kp LEFT_ARROW  &kp DOWN       &kp RIGHT  &ht LC(END) PAGE_DOWN
 &trans  &kp LC(Z)             &kp LC(X)  &kp LC(C)          &kp LC(V)        &kp LC(B)    &none   &none           &kp LS(ENTER)  &none      &none                  &trans
                                          &trans             &trans           &trans       &trans  &trans          &trans
+            >;
+        };
+
+        navi_num {
+            label = "navi, num";
+            bindings = <
+        &ht LC(HOME) PG_UP  &kp HOME  &kp UP         &kp END    &bt_in_out    &kp PLUS   &kp N7        &kp N8   &kp N9  &kp ASTERISK
+        &ht LC(END) PG_DN   &kp LEFT  &kp DOWN       &kp RIGHT  &trans        &kp MINUS  &kp N4        &kp N5   &kp N6  &kp SLASH
+&trans  &trans              &trans    &kp LS(ENTER)  &trans     &trans        &kp COMMA  &kp N1        &kp N2   &kp N3  &kp EQUAL     &trans
+                                      &trans         &trans     &trans        &trans     &kp NUMBER_0  &kp DOT
             >;
         };
 
@@ -376,16 +473,6 @@
         &trans  &kp Q   &kp A   &kp Z   &trans    &trans  &kp P   &kp SEMICOLON  &kp SLASH  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &trans     &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        layer_6 {
-            label = "navi, num";
-            bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &kp N7  &kp N8  &kp N9  &trans
-        &trans  &kp Q   &kp A   &kp Z   &trans    &trans  &kp N4  &kp N5  &kp N6  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &kp N0
             >;
         };
     };
