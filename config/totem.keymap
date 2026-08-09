@@ -458,6 +458,12 @@
             bindings = <&kp GRAVE>;
             key-positions = <3 2>;
         };
+
+        dtap_to_l0 {
+            bindings = <&to 0>;
+            key-positions = <11 13>;
+            layers = <2>;
+        };
     };
 
     keymap {
