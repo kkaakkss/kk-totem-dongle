@@ -32,7 +32,7 @@ layers:
   - ','
   - .
   - {t: /, h: '?'}
-  - RIGHT SHIFT
+  - {t: '?', h: RIGHT SHIFT}
   - LCTRL
   - LALT
   - {t: SPACE, h: '`\f & navi'}
