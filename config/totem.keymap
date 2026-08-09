@@ -209,11 +209,20 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
-        mo1_to2: mo1_to2 {
+        mo1_to2_outshell: mo1_to2_outshell {
             compatible = "zmk,behavior-tap-dance";
-            label = "MO1_TO2";
+            label = "MO1_TO2_OUTSHELL";
             #binding-cells = <0>;
-            bindings = <&lt 1 SPACE>, <&to 2>;
+            bindings = <&mo1_to2_in 1 0>, <&to 2>;
+        };
+
+        mo1_to2_in: mo1_to2_in {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO1_TO2_IN";
+            bindings = <&mo>, <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
         };
     };
 
@@ -251,7 +260,7 @@
         del_r {
             bindings = <&kp DELETE>;
             key-positions = <7 8>;
-            layers = <0>;
+            layers = <0 2>;
         };
 
         del_l {
@@ -263,7 +272,7 @@
         bsp_r {
             bindings = <&kp BACKSPACE>;
             key-positions = <6 7>;
-            layers = <0>;
+            layers = <0 2>;
         };
 
         bsp_l {
@@ -299,25 +308,25 @@
         shift_home {
             bindings = <&kp LS(HOME)>;
             key-positions = <6 7>;
-            layers = <5>;
+            layers = <1>;
         };
 
         shift_end {
             bindings = <&kp LS(END)>;
             key-positions = <7 8>;
-            layers = <5>;
+            layers = <1>;
         };
 
         ctrl_left {
             bindings = <&kp LC(LEFT_ARROW)>;
             key-positions = <16 17>;
-            layers = <5>;
+            layers = <1>;
         };
 
         ctrl_right {
             bindings = <&kp LC(RIGHT)>;
             key-positions = <17 18>;
-            layers = <5>;
+            layers = <1>;
         };
 
         space_combo {
@@ -347,11 +356,13 @@
         ht {
             bindings = <&ht DOUBLE_QUOTES SINGLE_QUOTE>;
             key-positions = <18 19>;
+            layers = <0>;
         };
 
         dtap_to_l2 {
             bindings = <&dtap_to_lay2>;
             key-positions = <11 13>;
+            layers = <0>;
         };
 
         kp {
@@ -411,10 +422,10 @@
         default_layer {
             label = "QWERTY";
             bindings = <
-                &ctrl_guard_alt_q  &ctrl_guard_alt_w  &ctrl_guard_alt_e  &alt_r_4             &alt_t_5       &kp Y                          &kp U                &kp I      &kp O    &kp P
-                &kp A              &lt 5 S            &lt 5 D            &hrm_L LEFT_SHIFT F  &kp G          &kp H                          &hrm_r LEFT_SHIFT J  &lt 5 K    &lt 5 L  &kp SEMICOLON
-&kp LEFT_SHIFT  &kp Z              &kp X              &kp C              &kp V                &kp B          &kp N                          &kp M                &kp COMMA  &kp DOT  &ht QUESTION SLASH  &kp RIGHT_SHIFT
-                                                      &kp LCTRL          &kp LALT             &lt 1 SPACE    &space_shift LEFT_SHIFT SPACE  &kp LEFT_SHIFT       &mo1_to2
+                &ctrl_guard_alt_q  &ctrl_guard_alt_w  &ctrl_guard_alt_e  &alt_r_4  &alt_t_5       &kp Y                          &kp U           &kp I              &kp O    &kp P
+                &kp A              &kp S              &kp D              &kp F     &kp G          &kp H                          &kp J           &kp K              &kp L    &kp SEMICOLON
+&kp LEFT_SHIFT  &kp Z              &kp X              &kp C              &kp V     &kp B          &kp N                          &kp M           &kp COMMA          &kp DOT  &ht QUESTION SLASH  &kp RIGHT_SHIFT
+                                                      &kp LCTRL          &kp LALT  &lt 1 SPACE    &space_shift LEFT_SHIFT SPACE  &kp LEFT_SHIFT  &mo1_to2_outshell
             >;
         };
 
