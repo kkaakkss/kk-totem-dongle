@@ -829,6 +829,14 @@ path.combo {
 <rect rx="6" ry="6" x="228" y="29" width="28" height="26" class="combo"/>
 <text x="242" y="42" class="combo tap">`</text>
 </g>
+<g class="combo combopos-11">
+<path d="M210,115 l-42,2" class="combo"/>
+<path d="M210,115 l42,-2" class="combo"/>
+<rect rx="6" ry="6" x="196" y="102" width="28" height="26" class="combo"/>
+<a href="#QWERTY">
+<text x="210" y="115" class="combo tap layer-activator">QWERTY</text>
+</a><text x="210" y="126" class="combo hold">toggle</text>
+</g>
 </g>
 </g>
 <g transform="translate(30, 1097)" class="layer-num, navi">
