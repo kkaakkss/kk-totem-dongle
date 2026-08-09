@@ -225,21 +225,18 @@
             tapping-term-ms = <150>;
         };
 
-        dot_to0: dot_to0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "DOT_TO0";
-            bindings = <&to>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <180>;
-        };
-
         n_b: n_b {
             compatible = "zmk,behavior-tap-dance";
             label = "N_B";
             #binding-cells = <0>;
             bindings = <&kp N>, <&kp B>;
+        };
+
+        dot_to0: dot_to0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOT_TO0";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&to 0>;
         };
     };
 
@@ -469,10 +466,10 @@
         navi_num {
             label = "navi, num";
             bindings = <
-        &ht LC(HOME) PG_UP  &kp HOME  &kp UP         &kp END    &bt_in_out    &kp PLUS   &kp N7        &kp N8          &kp N9  &kp ASTERISK
-        &ht LC(END) PG_DN   &kp LEFT  &kp DOWN       &kp RIGHT  &trans        &kp MINUS  &kp N4        &kp N5          &kp N6  &kp SLASH
-&trans  &trans              &trans    &kp LS(ENTER)  &trans     &trans        &kp COMMA  &kp N1        &kp N2          &kp N3  &kp EQUAL     &trans
-                                      &trans         &trans     &trans        &trans     &kp NUMBER_0  &dot_to0 0 DOT
+        &ht LC(HOME) PG_UP  &kp HOME  &kp UP         &kp END    &bt_in_out    &kp PLUS   &kp N7        &kp N8    &kp N9  &kp ASTERISK
+        &ht LC(END) PG_DN   &kp LEFT  &kp DOWN       &kp RIGHT  &trans        &kp MINUS  &kp N4        &kp N5    &kp N6  &kp SLASH
+&trans  &trans              &trans    &kp LS(ENTER)  &trans     &trans        &kp COMMA  &kp N1        &kp N2    &kp N3  &kp EQUAL     &trans
+                                      &trans         &trans     &trans        &trans     &kp NUMBER_0  &dot_to0
             >;
         };
 
@@ -481,7 +478,7 @@
             bindings = <
         &kp ASTERISK  &kp N7  &kp N8   &kp N9  &kp PLUS     &none   &kp HOME  &kp UP         &kp END    &ht LC(HOME) PG_UP
         &kp SLASH     &kp N4  &kp N5   &kp N6  &kp MINUS    &none   &kp LEFT  &kp DOWN       &kp RIGHT  &ht LC(END) PAGE_DOWN
-&trans  &kp EQUAL     &kp N1  &kp N2   &kp N3  &kp EQUAL    &none   &trans    &kp LS(ENTER)  &trans     &trans                 &trans
+&trans  &kp EQUAL     &kp N1  &kp N2   &kp N3  &kp COMMA    &none   &trans    &kp LS(ENTER)  &trans     &trans                 &trans
                               &kp DOT  &kp N0  &kp COMMA    &trans  &trans    &trans
             >;
         };
