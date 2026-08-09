@@ -1,0 +1,361 @@
+#define QWERTY 0
+#define NAV    1
+#define NUM    2
+#define OSL    3
+#define PINKY  4
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+
+/*
+ * KEYBALL39 -> TOTEM layer port
+ *
+ * KEYBALL39 layers 0 / 1 / 2 / 3 / 7
+ *       TOTEM layers 0 / 1 / 2 / 3 / 4
+ *
+ * TOTEM's two outer bottom-row keys are LSHIFT / RSHIFT.
+ * The six thumb keys follow the supplied layout image:
+ *
+ *   left : LT(NAV, SPACE), LCTRL, LALT
+ *   right: SPACE, CAPSLOCK, LT(NUM, SPACE)
+ */
+
+&lt {
+    tapping-term-ms = <240>;
+    flavor = "balanced";
+    quick-tap-ms = <150>;
+};
+
+&mt {
+    tapping-term-ms = <200>;
+    flavor = "tap-preferred";
+    quick-tap-ms = <150>;
+};
+
+&caps_word { continue-list = <UNDERSCORE MINUS>; };
+
+/ {
+    behaviors {
+        cmqus: comma_question {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_QUESTION";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp QUESTION>;
+
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        dtsmi: dot_semi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_SEMI";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp SEMI>;
+
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+        hrm_L: homerow_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Homerow_L";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <
+                5 6 7 8 9
+                15 16 17 18 19
+                26 27 28 29 30 31
+                35 36 37
+            >;
+        };
+
+        ht: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Hold_Tap";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+        };
+
+        hrm_r: homerow_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Homerow_R";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <
+                0 1 2 3 4
+                10 11 12 13 14
+                20 21 22 23 24 25
+                32 33 34
+            >;
+        };
+
+        alt_q_1: alt_q_1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_Q_1";
+            bindings = <&kp Q>, <&kp NUMBER_1>;
+
+            #binding-cells = <0>;
+            mods = <MOD_LALT>;
+            keep-mods = <MOD_LALT>;
+        };
+
+        alt_w_2: alt_w_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_W_2";
+            bindings = <&kp W>, <&kp NUMBER_2>;
+
+            #binding-cells = <0>;
+            mods = <MOD_LALT>;
+            keep-mods = <MOD_LALT>;
+        };
+
+        alt_e_3: alt_e_3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_E_3";
+            bindings = <&kp E>, <&kp NUMBER_3>;
+
+            #binding-cells = <0>;
+            mods = <MOD_LALT>;
+            keep-mods = <MOD_LALT>;
+        };
+
+        alt_r_4: alt_r_4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_R_4";
+            bindings = <&kp R>, <&kp NUMBER_4>;
+
+            #binding-cells = <0>;
+            mods = <MOD_LALT>;
+            keep-mods = <MOD_LALT>;
+        };
+
+        alt_t_5: alt_t_5 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_T_5";
+            bindings = <&kp T>, <&kp NUMBER_5>;
+
+            #binding-cells = <0>;
+            mods = <MOD_LALT>;
+            keep-mods = <MOD_LALT>;
+        };
+
+        as_tab: as_tab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "AS_TAB";
+            bindings = <&kp TAB>, <&kp LS(LA(TAB))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL | MOD_LALT)>;
+        };
+
+        space_mo2_to2: space_mo2_to2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SPACE_MO2_TO2";
+            #binding-cells = <0>;
+            bindings = <&lt 2 SPACE>, <&to 2>;
+        };
+
+        space_to0: space_to0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SPACE_TO0";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&to 0>;
+        };
+    };
+
+    macros {
+        Hiragana: Hiragana {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE)>;
+            label = "HIRAGANA";
+        };
+
+        bt_in_out: bluetooth {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &out OUT_TOG>;
+            label = "BLUETOOTH";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        enter_r {
+            bindings = <&kp ENTER>;
+            key-positions = <16 17>;
+            layers = <0>;
+        };
+
+        enter_l {
+            bindings = <&kp ENTER>;
+            key-positions = <12 13>;
+            layers = <0>;
+        };
+
+        del_r {
+            bindings = <&kp DELETE>;
+            key-positions = <7 8>;
+            layers = <0>;
+        };
+
+        del_l {
+            bindings = <&kp DELETE>;
+            key-positions = <23 24>;
+            layers = <QWERTY>;
+        };
+
+        bsp_r {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <6 7>;
+            layers = <0>;
+        };
+
+        bsp_l {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <22 23>;
+            layers = <QWERTY>;
+        };
+
+        as_tab_combo {
+            bindings = <&as_tab>;
+            key-positions = <10 11>;
+            layers = <QWERTY>;
+        };
+
+        caps_combo {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <21 22>;
+            layers = <QWERTY>;
+        };
+
+        esc_combo {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
+            layers = <QWERTY>;
+        };
+
+        ralt_combo {
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <16 18>;
+            layers = <QWERTY>;
+        };
+
+        osl_combo {
+            bindings = <&sl OSL>;
+            key-positions = <11 12 13>;
+            layers = <QWERTY>;
+        };
+
+        shift_home {
+            bindings = <&kp LS(HOME)>;
+            key-positions = <6 7>;
+            layers = <2>;
+        };
+
+        shift_end {
+            bindings = <&kp LS(END)>;
+            key-positions = <7 8>;
+            layers = <2>;
+        };
+
+        ctrl_left {
+            bindings = <&kp LC(LEFT_ARROW)>;
+            key-positions = <16 17>;
+            layers = <2>;
+        };
+
+        ctrl_right {
+            bindings = <&kp LC(RIGHT)>;
+            key-positions = <17 18>;
+            layers = <2>;
+        };
+
+        space_combo {
+            bindings = <&kp SPACE>;
+            key-positions = <24 25>;
+            layers = <QWERTY>;
+        };
+
+        tab_combo {
+            bindings = <&kp TAB>;
+            key-positions = <11 12>;
+            layers = <0 2>;
+        };
+
+        esc2_combo {
+            bindings = <&kp ESCAPE>;
+            key-positions = <1 2>;
+            layers = <0 2>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            label = "QWERTY";
+            bindings = <
+                &alt_q_1  &alt_w_2     &alt_e_3       &alt_r_4             &alt_t_5        &kp Y                 &kp U                &kp I          &kp O        &kp P
+                &kp A     &lt PINKY S  &lt 4 D        &hrm_L LEFT_SHIFT F  &kp G           &kp H                 &hrm_r LEFT_SHIFT J  &lt 4 K        &lt PINKY L  &kp SEMICOLON
+&kp LEFT_SHIFT  &kp Z     &kp X        &kp C          &kp V                &kp B           &kp N                 &kp M                &kp COMMA      &kp DOT      &ht QUESTION SLASH  &kp RIGHT_SHIFT
+                                       &lt NAV SPACE  &kp LCTRL            &kp LEFT_ALT    &ht LEFT_SHIFT SPACE  &space_mo2_to2       &lt NUM SPACE
+            >;
+        };
+
+        f_grave_layer {
+            label = "`\f & navi";
+            bindings = <
+        &kp GRAVE             &kp F2     &kp F3             &kp F4           &kp F5       &none   &kp HOME        &kp UP_ARROW   &kp END    &ht LC(HOME) PG_UP
+        &kp NON_US_BACKSLASH  &kp LC(S)  &kp LC(PAGE_DOWN)  &kp LC(PAGE_UP)  &none        &none   &kp LEFT_ARROW  &kp DOWN       &kp RIGHT  &ht LC(END) PAGE_DOWN
+&trans  &kp LC(Z)             &kp LC(X)  &kp LC(C)          &kp LC(V)        &kp LC(B)    &none   &none           &kp LS(ENTER)  &none      &none                  &trans
+                                         &trans             &trans           &trans       &trans  &trans          &trans
+            >;
+        };
+
+        num_navi_layer {
+            label = "num, bra, navi";
+            bindings = <
+        &ht MINUS PLUS      &ht AMPERSAND NUMBER_7    &ht ASTERISK NUMBER_8           &ht LEFT_PARENTHESIS NUMBER_9  &ht LESS_THAN LEFT_PARENTHESIS    &ht GREATER_THAN RIGHT_PARENTHESIS  &kp HOME    &kp UP         &kp END    &ht LC(HOME) PG_UP
+        &ht SLASH ASTERISK  &ht DOLLAR NUMBER_4       &ht PERCENT NUMBER_5            &ht CARET NUMBER_6             &ht LEFT_BRACE LEFT_BRACKET       &ht RIGHT_BRACE RIGHT_BRACKET       &kp LEFT    &kp DOWN       &kp RIGHT  &ht LC(END) PAGE_DOWN
+&trans  &kp EQUAL           &ht EXCLAMATION NUMBER_1  &ht AT_SIGN NUMBER_2            &ht HASH NUMBER_3              &kp COMMA                         &kp UNDERSCORE                      &trans      &kp LS(ENTER)  &trans     &to 0                  &trans
+                                                      &ht RIGHT_PARENTHESIS NUMBER_0  &kp DOT                        &trans                            &trans                              &space_to0  &trans
+            >;
+        };
+
+        osl_layer {
+            label = "OSL";
+            bindings = <
+        &kp LC(GRAVE)  &kp F23           &kp F22           &kp LG(R)         &kp LS(F2)      &kp GRAVE         &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+        &kp LC(GRAVE)  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LS(F3)      &kp LEFT_BRACKET  &kp DOLLAR       &kp PERCENT   &kp CARET             &kp RIGHT_BRACKET
+&trans  &kp F21        &kp F19           &kp F20           &kp F18           &kp LG(HOME)    &kp LESS_THAN     &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp GREATER_THAN       &kt UNDERSCORE
+                                         &trans            &trans            &trans          &trans            &trans           &trans
+            >;
+        };
+
+        pinky_layer {
+            label = "PINKY";
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &trans     &trans
+        &trans  &kp Q   &kp A   &kp Z   &trans    &trans  &kp P   &kp SEMICOLON  &kp SLASH  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &trans     &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+    };
+};
