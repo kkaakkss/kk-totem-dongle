@@ -21,7 +21,7 @@ layers:
   - {t: K, h: LSHFT}
   - L
   - ;
-  - LEFT SHIFT
+  - {t: Sft+T, h: LEFT SHIFT}
   - Z
   - X
   - C
