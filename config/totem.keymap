@@ -64,7 +64,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             require-prior-idle-ms = <150>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <
@@ -82,6 +82,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
+            flavor = "balanced";
         };
 
         hrm_r: homerow_right {
@@ -92,7 +93,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             require-prior-idle-ms = <150>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <
@@ -153,13 +154,6 @@
             keep-mods = <MOD_LALT>;
         };
 
-        space_mo2_to2: space_mo2_to2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SPACE_MO2_TO2";
-            #binding-cells = <0>;
-            bindings = <&lt 5 SPACE>, <&to 5>;
-        };
-
         space_to0: space_to0 {
             compatible = "zmk,behavior-tap-dance";
             label = "SPACE_TO0";
@@ -215,14 +209,11 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
-        ctrl_guard_alt_rwin: ctrl_guard_alt_rwin {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_GUARD_ALT_RWIN";
-            bindings = <&alt_r_4>, <&kp R>;
-
+        mo1_to2: mo1_to2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MO1_TO2";
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LALT)>;
-            keep-mods = <(MOD_LGUI)>;
+            bindings = <&lt 1 SPACE>, <&to 2>;
         };
     };
 
@@ -350,6 +341,7 @@
         minus_underscore {
             bindings = <&ht UNDERSCORE MINUS>;
             key-positions = <27 28>;
+            layers = <0>;
         };
 
         ht {
@@ -419,10 +411,10 @@
         default_layer {
             label = "QWERTY";
             bindings = <
-                &ctrl_guard_alt_q  &ctrl_guard_alt_w  &ctrl_guard_alt_e  &ctrl_guard_alt_rwin  &alt_t_5       &kp Y                          &kp U                &kp I           &kp O    &kp P
-                &kp A              &lt 5 S            &lt 5 D            &hrm_L LEFT_SHIFT F   &kp G          &kp H                          &hrm_r LEFT_SHIFT J  &lt 5 K         &lt 5 L  &kp SEMICOLON
-&kp LEFT_SHIFT  &kp Z              &kp X              &kp C              &kp V                 &kp B          &kp N                          &kp M                &kp COMMA       &kp DOT  &ht QUESTION SLASH  &kp RIGHT_SHIFT
-                                                      &kp LCTRL          &kp LALT              &lt 1 SPACE    &space_shift LEFT_SHIFT SPACE  &kp LEFT_SHIFT       &space_mo2_to2
+                &ctrl_guard_alt_q  &ctrl_guard_alt_w  &ctrl_guard_alt_e  &alt_r_4             &alt_t_5       &kp Y                          &kp U                &kp I      &kp O    &kp P
+                &kp A              &lt 5 S            &lt 5 D            &hrm_L LEFT_SHIFT F  &kp G          &kp H                          &hrm_r LEFT_SHIFT J  &lt 5 K    &lt 5 L  &kp SEMICOLON
+&kp LEFT_SHIFT  &kp Z              &kp X              &kp C              &kp V                &kp B          &kp N                          &kp M                &kp COMMA  &kp DOT  &ht QUESTION SLASH  &kp RIGHT_SHIFT
+                                                      &kp LCTRL          &kp LALT             &lt 1 SPACE    &space_shift LEFT_SHIFT SPACE  &kp LEFT_SHIFT       &mo1_to2
             >;
         };
 
@@ -439,10 +431,10 @@
         navi_num {
             label = "navi, num";
             bindings = <
-        &ht LC(HOME) PG_UP  &kp HOME  &kp UP         &kp END    &bt_in_out    &kp PLUS   &kp N7        &kp N8   &kp N9  &kp ASTERISK
-        &ht LC(END) PG_DN   &kp LEFT  &kp DOWN       &kp RIGHT  &trans        &kp MINUS  &kp N4        &kp N5   &kp N6  &kp SLASH
-&trans  &trans              &trans    &kp LS(ENTER)  &trans     &trans        &kp COMMA  &kp N1        &kp N2   &kp N3  &kp EQUAL     &trans
-                                      &trans         &trans     &trans        &trans     &kp NUMBER_0  &kp DOT
+        &ht LC(HOME) PG_UP  &kp HOME  &kp UP         &kp END    &bt_in_out    &kp PLUS   &kp N7        &kp N8  &kp N9  &kp ASTERISK
+        &ht LC(END) PG_DN   &kp LEFT  &kp DOWN       &kp RIGHT  &trans        &kp MINUS  &kp N4        &kp N5  &kp N6  &kp SLASH
+&trans  &trans              &trans    &kp LS(ENTER)  &trans     &trans        &kp COMMA  &kp N1        &kp N2  &kp N3  &kp EQUAL     &trans
+                                      &trans         &trans     &trans        &kp DOT    &kp NUMBER_0  &to 0
             >;
         };
 
