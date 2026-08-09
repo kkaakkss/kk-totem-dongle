@@ -4,7 +4,11 @@
   <img alt="TOTEM logo font" src="/docs/images/TOTEM_logo_bright.svg">
 </picture>
 
+
+
 <img src="/keymap-drawer/totem.svg" >
+
+
 
 # ZMK CONFIG FOR THE TOTEM SPLIT KEYBOARD
 
