@@ -328,7 +328,7 @@ combos:
   k: '='
   l: [QWERTY]
 - p: [3, 2]
-  k: '`'
+  k: Sft+T
 - p: [11, 13]
   k: {t: QWERTY, h: toggle}
   l: ['navi, num']
