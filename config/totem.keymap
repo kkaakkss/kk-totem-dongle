@@ -454,8 +454,8 @@
             layers = <0>;
         };
 
-        grave_L {
-            bindings = <&kp GRAVE>;
+        ssang_siut {
+            bindings = <&kp LS(T)>;
             key-positions = <3 2>;
         };
 
