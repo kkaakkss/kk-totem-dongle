@@ -13,12 +13,12 @@ layers:
   - P
   - A
   - S
-  - {t: D, h: LSHFT}
+  - {t: D, h: PINKY}
   - {t: F, h: LSHFT}
   - G
   - H
   - {t: J, h: LSHIFT}
-  - {t: K, h: LSHFT}
+  - {t: K, h: PINKY}
   - L
   - ;
   - {t: Sft+T, h: LEFT SHIFT}
@@ -45,7 +45,7 @@ layers:
   - F3
   - F4
   - F5
-  - ''
+  - {t: BT, h: '0'}
   - HOME
   - UP ARROW
   - END
@@ -54,8 +54,8 @@ layers:
   - Ctl+S
   - Ctl+PG UP
   - Ctl+PAGE DOWN
-  - ''
-  - ''
+  - '&bt_in_out'
+  - {t: BT, h: '1'}
   - LEFT ARROW
   - DOWN
   - RIGHT
@@ -66,7 +66,7 @@ layers:
   - Ctl+C
   - Ctl+V
   - Ctl+B
-  - ''
+  - {t: BT, h: '2'}
   - ''
   - Sft+ENTER
   - ''
@@ -83,7 +83,7 @@ layers:
   - HOME
   - UP
   - END
-  - '&bt_in_out'
+  - {t: ▽, type: trans}
   - +
   - '7'
   - '8'
@@ -208,7 +208,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Q
-  - A
+  - {t: A, type: held}
   - Z
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
