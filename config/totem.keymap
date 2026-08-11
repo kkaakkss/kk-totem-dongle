@@ -245,6 +245,15 @@
             #binding-cells = <0>;
             bindings = <&kp B>, <&kp N>;
         };
+
+        caps_q: caps_q {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CAPS_Q";
+            bindings = <&kp>, <&ctrl_guard_alt_q>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -472,10 +481,10 @@
         default_layer {
             label = "QWERTY";
             bindings = <
-                      &ctrl_guard_alt_q  &ctrl_guard_alt_w  &ctrl_guard_alt_e  &alt_r_4        &alt_t_5       &kp Y                          &kp U                      &kp I              &kp O    &kp P
-                      &kp A              &lt 5 S            &lt 5 D            &hrm_L LSHFT F  &kp G          &kp H                          &hrm_r LSHIFT J            &lt 5 K            &lt 5 L  &kp SEMICOLON
-&mt LEFT_SHIFT LS(T)  &kp Z              &kp X              &kp C              &kp V           &b_n           &n_b                           &kp M                      &kp COMMA          &kp DOT  &ht QUESTION SLASH  &mt RIGHT_SHIFT QUESTION
-                                                            &kp LCTRL          &kp LALT        &lt 1 SPACE    &space_shift LEFT_SHIFT SPACE  &space_shift LSHIFT SPACE  &mo3_to2_outshell
+                      &caps_q CAPSLOCK 0  &ctrl_guard_alt_w  &ctrl_guard_alt_e  &alt_r_4        &alt_t_5       &kp Y                          &kp U                      &kp I              &kp O    &kp P
+                      &kp A               &lt 5 S            &lt 5 D            &hrm_L LSHFT F  &kp G          &kp H                          &hrm_r LSHIFT J            &lt 5 K            &lt 5 L  &kp SEMICOLON
+&mt LEFT_SHIFT LS(T)  &kp Z               &kp X              &kp C              &kp V           &b_n           &n_b                           &kp M                      &kp COMMA          &kp DOT  &ht QUESTION SLASH  &mt RIGHT_SHIFT QUESTION
+                                                             &kp LCTRL          &kp LALT        &lt 1 SPACE    &space_shift LEFT_SHIFT SPACE  &space_shift LSHIFT SPACE  &mo3_to2_outshell
             >;
         };
 
