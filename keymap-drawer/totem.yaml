@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: totem}
 layers:
   QWERTY:
-  - {t: Q, h: CAPSLOCK, s: Q}
+  - {t: Q, s: V}
   - {t: W, s: W}
   - {t: E, s: E}
   - {t: R, s: '4'}
@@ -11,7 +11,7 @@ layers:
   - I
   - O
   - P
-  - A
+  - {t: C, h: CAPS}
   - {t: S, h: PINKY}
   - {t: D, h: PINKY}
   - {t: F, h: LSHFT}
@@ -22,10 +22,10 @@ layers:
   - {t: L, h: PINKY}
   - ;
   - {t: Sft+T, h: LEFT SHIFT}
-  - Z
+  - {t: Z, h: LEFT SHIFT}
   - X
-  - C
-  - V
+  - A
+  - Q
   - '&b_n'
   - '&n_b'
   - M
@@ -37,7 +37,7 @@ layers:
   - LALT
   - {t: SPACE, h: '`\f & navi'}
   - {t: SPACE, h: LEFT SHIFT}
-  - {t: SPACE, h: LSHIFT}
+  - '&mo3_to2_outshell'
   - '&mo3_to2_outshell'
   '`\f & navi':
   - '`'
@@ -54,7 +54,7 @@ layers:
   - Ctl+S
   - Ctl+PG UP
   - Ctl+PAGE DOWN
-  - '&bt_in_out'
+  - ''
   - {t: BT, h: '1'}
   - LEFT ARROW
   - DOWN
@@ -157,12 +157,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   OSL:
-  - Ctl+`
+  - Alt+F4
   - F23
   - F22
   - Gui+R
   - Sft+F2
-  - {t: ▽, type: trans}
+  - {t: BT, h: '0'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -172,7 +172,7 @@ layers:
   - {t: Gui+2, type: held}
   - {t: Gui+3, type: held}
   - Sft+F3
-  - {t: ▽, type: trans}
+  - {t: BT, h: '1'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -183,7 +183,7 @@ layers:
   - F20
   - F18
   - Gui+HOME
-  - {t: ▽, type: trans}
+  - {t: BT, h: '2'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
