@@ -397,27 +397,27 @@
 
         kp {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <3 4>;
+            key-positions = <13 14>;
         };
 
         bra_R {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <5 6>;
+            key-positions = <16 15>;
         };
 
         BKT_L {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <13 14>;
+            key-positions = <3 4>;
         };
 
         BKT_R {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <15 16>;
+            key-positions = <5 6>;
         };
 
         gui_l {
             bindings = <&kp LG(L)>;
-            key-positions = <1 2 3>;
+            key-positions = <1 2 0>;
             layers = <0>;
         };
 
@@ -472,6 +472,12 @@
             bindings = <&to 0>;
             key-positions = <11 13>;
             layers = <2>;
+        };
+
+        osl_f2 {
+            bindings = <&kp F2>;
+            key-positions = <1 2 3>;
+            layers = <0 3>;
         };
     };
 
