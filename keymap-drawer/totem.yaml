@@ -45,7 +45,7 @@ layers:
   - F3
   - F4
   - F5
-  - {t: BT, h: '0'}
+  - ''
   - HOME
   - UP ARROW
   - END
@@ -55,7 +55,7 @@ layers:
   - Ctl+PG UP
   - Ctl+PAGE DOWN
   - ''
-  - {t: BT, h: '1'}
+  - ''
   - LEFT ARROW
   - DOWN
   - RIGHT
@@ -66,7 +66,7 @@ layers:
   - Ctl+C
   - Ctl+V
   - Ctl+B
-  - {t: BT, h: '2'}
+  - ''
   - ''
   - Sft+ENTER
   - ''
@@ -110,7 +110,7 @@ layers:
   - '2'
   - '3'
   - ','
-  - {t: ▽, type: trans}
+  - LSHIFT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
