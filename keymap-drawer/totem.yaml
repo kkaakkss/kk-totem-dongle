@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: totem}
 layers:
   QWERTY:
-  - {t: Q, s: V}
+  - {t: V, s: V}
   - {t: W, s: W}
   - {t: E, s: E}
   - {t: R, s: '4'}
