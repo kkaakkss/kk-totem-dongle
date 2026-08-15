@@ -104,10 +104,10 @@
             >;
         };
 
-        alt_q_1: alt_q_1 {
+        alt_v_1: alt_v_1 {
             compatible = "zmk,behavior-mod-morph";
-            label = "ALT_Q_1";
-            bindings = <&kp Q>, <&kp NUMBER_1>;
+            label = "ALT_V_1";
+            bindings = <&kp V>, <&kp NUMBER_1>;
 
             #binding-cells = <0>;
             mods = <MOD_LALT>;
@@ -192,7 +192,7 @@
         ctrl_guard_alt_v: ctrl_guard_alt_v {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_GUARD_ALT_V";
-            bindings = <&alt_q_1>, <&kp V>;
+            bindings = <&alt_v_1>, <&kp V>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
