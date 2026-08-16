@@ -283,9 +283,6 @@ combos:
 - p: [11, 10]
   k: TAB
   l: [QWERTY, PINKY, 'navi, num', 'num, navi']
-- p: [1, 2]
-  k: ESCAPE
-  l: [QWERTY, PINKY]
 - p: [27, 28]
   k: '-'
   l: [QWERTY]
