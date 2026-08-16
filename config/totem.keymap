@@ -367,8 +367,8 @@
 
         tab_combo {
             bindings = <&kp TAB>;
-            key-positions = <11 12>;
-            layers = <0 5>;
+            key-positions = <11 10>;
+            layers = <0 5 2 3>;
         };
 
         esc2_combo {
@@ -465,7 +465,7 @@
 
         ssang_siut {
             bindings = <&kp LS(T)>;
-            key-positions = <3 2>;
+            key-positions = <12 11>;
         };
 
         dtap_to_l0 {
