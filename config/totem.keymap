@@ -506,8 +506,8 @@
             label = "QWERTY";
             bindings = <
                       &ctrl_guard_alt_v  &ctrl_guard_alt_w  &ctrl_guard_alt_e  &alt_r_4        &alt_t_5       &kp Y                          &kp U              &kp I              &kp O    &kp P
-                      &caps_c CAPS C     &lt 5 S            &lt 5 D            &hrm_L LSHFT F  &kp G          &kp H                          &hrm_r LSHIFT J    &lt 5 K            &lt 5 L  &kp SEMICOLON
-&mt LEFT_SHIFT LS(T)  &ht LEFT_SHIFT Z   &kp X              &kp A              &kp Q           &b_n           &n_b                           &kp M              &kp COMMA          &kp DOT  &ht QUESTION SLASH  &mt RIGHT_SHIFT QUESTION
+                      &kp C              &lt 5 S            &lt 5 D            &hrm_L LSHFT F  &kp G          &kp H                          &hrm_r LSHIFT J    &lt 5 K            &lt 5 L  &kp SEMICOLON
+&mt LEFT_SHIFT LS(T)  &kp Z              &kp X              &kp A              &kp Q           &b_n           &n_b                           &kp M              &kp COMMA          &kp DOT  &ht QUESTION SLASH  &mt RIGHT_SHIFT QUESTION
                                                             &kp LCTRL          &kp LALT        &lt 1 SPACE    &space_shift LEFT_SHIFT SPACE  &mo3_to2_outshell  &mo3_to2_outshell
             >;
         };
