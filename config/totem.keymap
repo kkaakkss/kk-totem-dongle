@@ -479,6 +479,24 @@
             key-positions = <1 2 3>;
             layers = <0 3>;
         };
+
+        question_mark {
+            bindings = <&kp QUESTION>;
+            key-positions = <17 18>;
+            layers = <0>;
+        };
+
+        sft_r {
+            bindings = <&kp LS(R)>;
+            key-positions = <2 3>;
+            layers = <0>;
+        };
+
+        sft_e {
+            bindings = <&kp LS(E)>;
+            key-positions = <2 1>;
+            layers = <0>;
+        };
     };
 
     keymap {
