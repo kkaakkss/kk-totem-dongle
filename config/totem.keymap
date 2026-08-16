@@ -371,12 +371,6 @@
             layers = <0 5 2 3>;
         };
 
-        esc2_combo {
-            bindings = <&kp ESCAPE>;
-            key-positions = <1 2>;
-            layers = <0 5>;
-        };
-
         minus_underscore {
             bindings = <&kp MINUS>;
             key-positions = <27 28>;
