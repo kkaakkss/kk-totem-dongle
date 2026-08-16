@@ -11,7 +11,7 @@ layers:
   - I
   - O
   - P
-  - {t: C, h: CAPS}
+  - C
   - {t: S, h: PINKY}
   - {t: D, h: PINKY}
   - {t: F, h: LSHFT}
@@ -22,7 +22,7 @@ layers:
   - {t: L, h: PINKY}
   - ;
   - {t: Sft+T, h: LEFT SHIFT}
-  - {t: Z, h: LEFT SHIFT}
+  - Z
   - X
   - A
   - Q
