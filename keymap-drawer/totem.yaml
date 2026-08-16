@@ -335,3 +335,12 @@ combos:
 - p: [1, 2, 3]
   k: F2
   l: [QWERTY, 'num, navi']
+- p: [17, 18]
+  k: '?'
+  l: [QWERTY]
+- p: [2, 3]
+  k: Sft+R
+  l: [QWERTY]
+- p: [2, 1]
+  k: Sft+E
+  l: [QWERTY]
