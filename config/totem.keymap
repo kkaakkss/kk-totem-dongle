@@ -172,9 +172,9 @@
             flavor = "tap-preferred";
         };
 
-        dtap_to_lay2: dtap_to_lay2 {
+        mo_dtap_to_NavNum: mo_dtap_to_NavNum {
             compatible = "zmk,behavior-tap-dance";
-            label = "DTAP_TO_LAY2";
+            label = "MO_DTAP_TO_NAVNUM";
             #binding-cells = <0>;
             bindings = <&mo 2>, <&tog 2>;
         };
@@ -209,9 +209,9 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
-        mo3_to2_outshell: mo3_to2_outshell {
+        mo_NumNav_dt_to_NavNum: mo_NumNav_dt_to_NavNum {
             compatible = "zmk,behavior-tap-dance";
-            label = "MO3_TO2_OUTSHELL";
+            label = "MO_NUMNAV_DT_TO_NAVNUM";
             #binding-cells = <0>;
             bindings = <&mo3_to2_in 3 0>, <&to 2>;
         };
@@ -232,9 +232,9 @@
             bindings = <&kp N>, <&kp B>;
         };
 
-        dot_to0: dot_to0 {
+        t_dot_dt_to0: t_dot_dt_to0 {
             compatible = "zmk,behavior-tap-dance";
-            label = "DOT_TO0";
+            label = "T_DOT_DT_TO0";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&to 0>;
         };
@@ -384,7 +384,7 @@
         };
 
         dtap_to_l2 {
-            bindings = <&dtap_to_lay2>;
+            bindings = <&mo_dtap_to_NavNum>;
             key-positions = <11 13>;
             layers = <0>;
         };
@@ -499,10 +499,10 @@
         default_layer {
             label = "QWERTY";
             bindings = <
-                      &ctrl_guard_alt_v  &ctrl_guard_alt_w  &ctrl_guard_alt_e  &alt_r_4        &alt_t_5       &kp Y                          &kp U              &kp I              &kp O    &kp P
-                      &kp C              &lt 5 S            &lt 5 D            &hrm_L LSHFT F  &kp G          &kp H                          &hrm_r LSHIFT J    &lt 5 K            &lt 5 L  &kp SEMICOLON
-&mt LEFT_SHIFT LS(T)  &kp Z              &kp X              &kp A              &kp Q           &b_n           &n_b                           &kp M              &kp COMMA          &kp DOT  &ht QUESTION SLASH  &mt RIGHT_SHIFT QUESTION
-                                                            &kp LCTRL          &kp LALT        &lt 1 SPACE    &space_shift LEFT_SHIFT SPACE  &mo3_to2_outshell  &mo3_to2_outshell
+                      &ctrl_guard_alt_v  &ctrl_guard_alt_w  &ctrl_guard_alt_e  &alt_r_4        &alt_t_5       &kp Y                          &kp U                    &kp I                    &kp O    &kp P
+                      &kp C              &lt 5 S            &lt 5 D            &hrm_L LSHFT F  &kp G          &kp H                          &hrm_r LSHIFT J          &lt 5 K                  &lt 5 L  &kp SEMICOLON
+&mt LEFT_SHIFT LS(T)  &kp Z              &kp X              &kp A              &kp Q           &b_n           &n_b                           &kp M                    &kp COMMA                &kp DOT  &ht QUESTION SLASH  &mt RIGHT_SHIFT QUESTION
+                                                            &kp LCTRL          &kp LALT        &lt 1 SPACE    &space_shift LEFT_SHIFT SPACE  &mo_NumNav_dt_to_NavNum  &mo_NumNav_dt_to_NavNum
             >;
         };
 
@@ -519,10 +519,10 @@
         navi_num {
             label = "navi, num";
             bindings = <
-        &ht LC(HOME) PG_UP  &kp HOME  &kp UP         &kp END    &trans    &kp PLUS   &kp N7        &kp N8    &kp N9  &kp ASTERISK
-        &ht LC(END) PG_DN   &kp LEFT  &kp DOWN       &kp RIGHT  &trans    &kp MINUS  &kp N4        &kp N5    &kp N6  &kp SLASH
-&trans  &trans              &trans    &kp LS(ENTER)  &trans     &trans    &kp EQUAL  &kp N1        &kp N2    &kp N3  &kp COMMA     &kp LSHIFT
-                                      &trans         &trans     &trans    &trans     &kp NUMBER_0  &dot_to0
+        &ht LC(HOME) PG_UP  &kp HOME  &kp UP         &kp END    &trans    &kp PLUS   &kp N7        &kp N8         &kp N9  &kp ASTERISK
+        &ht LC(END) PG_DN   &kp LEFT  &kp DOWN       &kp RIGHT  &trans    &kp MINUS  &kp N4        &kp N5         &kp N6  &kp SLASH
+&trans  &trans              &trans    &kp LS(ENTER)  &trans     &trans    &kp EQUAL  &kp N1        &kp N2         &kp N3  &kp COMMA     &kp LSHIFT
+                                      &trans         &trans     &trans    &trans     &kp NUMBER_0  &t_dot_dt_to0
             >;
         };
 
