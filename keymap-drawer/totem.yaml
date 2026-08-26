@@ -37,8 +37,8 @@ layers:
   - LALT
   - {t: SPACE, h: '`\f & navi'}
   - {t: SPACE, h: LEFT SHIFT}
-  - '&mo3_to2_outshell'
-  - '&mo3_to2_outshell'
+  - '&mo_NumNav_dt_to_NavNum'
+  - '&mo_NumNav_dt_to_NavNum'
   '`\f & navi':
   - '`'
   - F2
@@ -116,7 +116,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '0'
-  - '&dot_to0'
+  - '&t_dot_dt_to0'
   num, navi:
   - '*'
   - '7'
@@ -290,7 +290,7 @@ combos:
   k: ''''
   l: [QWERTY]
 - p: [11, 13]
-  k: '&dtap_to_lay2'
+  k: '&mo_dtap_to_NavNum'
   l: [QWERTY]
 - p: [13, 14]
   k: (
