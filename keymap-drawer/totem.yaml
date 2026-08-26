@@ -15,7 +15,7 @@ layers:
   - {t: S, h: PINKY}
   - {t: D, h: PINKY}
   - {t: F, h: LSHFT}
-  - G
+  - {t: G, s: H}
   - H
   - {t: J, h: LSHIFT}
   - {t: K, h: PINKY}
@@ -50,7 +50,7 @@ layers:
   - UP ARROW
   - END
   - {t: PG UP, h: Ctl+HOME}
-  - \
+  - Ctl+A
   - Ctl+S
   - Ctl+PG UP
   - Ctl+PAGE DOWN
