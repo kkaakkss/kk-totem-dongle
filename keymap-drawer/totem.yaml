@@ -21,7 +21,7 @@ layers:
   - {t: K, h: PINKY}
   - {t: L, h: PINKY}
   - ;
-  - {t: Sft+T, h: LEFT SHIFT}
+  - LEFT SHIFT
   - Z
   - X
   - A
@@ -32,7 +32,7 @@ layers:
   - ','
   - .
   - {t: /, h: '?'}
-  - {t: '?', h: RIGHT SHIFT}
+  - LSHFT
   - LCTRL
   - LALT
   - {t: SPACE, h: '`\f & navi'}
@@ -241,13 +241,13 @@ combos:
 - p: [12, 13]
   k: ENTER
   l: [QWERTY]
-- p: [7, 8]
+- p: [28, 29]
   k: DELETE
   l: [QWERTY, 'navi, num']
 - p: [23, 24]
   k: DELETE
   l: [QWERTY]
-- p: [6, 7]
+- p: [27, 28]
   k: BACKSPACE
   l: [QWERTY, 'navi, num']
 - p: [22, 23]
@@ -265,10 +265,10 @@ combos:
 - p: [11, 12, 13]
   k: {t: OSL, h: sticky}
   l: [QWERTY]
-- p: [6, 7]
+- p: [27, 28, 7, 6]
   k: Sft+HOME
   l: ['`\f & navi']
-- p: [7, 8]
+- p: [8, 7]
   k: Sft+END
   l: ['`\f & navi']
 - p: [16, 17]
@@ -283,7 +283,7 @@ combos:
 - p: [11, 10]
   k: TAB
   l: [QWERTY, PINKY, 'navi, num', 'num, navi']
-- p: [27, 28]
+- p: [6, 7]
   k: '-'
   l: [QWERTY]
 - p: [18, 19]
@@ -296,9 +296,9 @@ combos:
   k: (
 - p: [16, 15]
   k: )
-- p: [3, 4]
+- p: [4, 3]
   k: '['
-- p: [5, 6]
+- p: [6, 5]
   k: ']'
 - p: [1, 2, 0]
   k: Gui+L
@@ -315,7 +315,7 @@ combos:
 - p: [12, 13]
   k: Ctl+RIGHT
   l: ['navi, num']
-- p: [28, 29]
+- p: [7, 8]
   k: '`'
   l: [QWERTY]
 - p: [29, 30]
