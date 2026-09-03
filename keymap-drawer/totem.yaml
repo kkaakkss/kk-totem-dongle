@@ -12,14 +12,14 @@ layers:
   - O
   - P
   - C
-  - {t: S, h: PINKY}
-  - {t: D, h: PINKY}
+  - S
+  - D
   - {t: F, h: LSHFT}
   - {t: G, s: H}
   - H
   - {t: J, h: LSHIFT}
-  - {t: K, h: PINKY}
-  - {t: L, h: PINKY}
+  - K
+  - L
   - ;
   - LEFT SHIFT
   - Z
@@ -207,7 +207,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: Q, type: held}
+  - Q
   - A
   - Z
   - {t: ▽, type: trans}
