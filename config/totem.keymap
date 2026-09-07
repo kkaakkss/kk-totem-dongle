@@ -401,22 +401,22 @@
 
         kp {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <13 14>;
+            key-positions = <3 4>;
         };
 
         bra_R {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <16 15>;
+            key-positions = <6 5>;
         };
 
         BKT_L {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <4 3>;
+            key-positions = <13 14>;
         };
 
         BKT_R {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <6 5>;
+            key-positions = <16 15>;
         };
 
         gui_l {
