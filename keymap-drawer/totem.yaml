@@ -265,7 +265,7 @@ combos:
 - p: [11, 12, 13]
   k: {t: OSL, h: sticky}
   l: [QWERTY]
-- p: [27, 28, 7, 6]
+- p: [7, 6]
   k: Sft+HOME
   l: ['`\f & navi']
 - p: [8, 7]
