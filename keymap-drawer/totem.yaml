@@ -243,16 +243,16 @@ combos:
   l: [QWERTY]
 - p: [28, 29]
   k: DELETE
-  l: [QWERTY, 'navi, num']
+  l: [QWERTY, 'navi, num', '`\f & navi', 'num, navi']
 - p: [23, 24]
   k: DELETE
-  l: [QWERTY]
+  l: [QWERTY, '`\f & navi', 'navi, num', 'num, navi']
 - p: [27, 28]
   k: BACKSPACE
-  l: [QWERTY, 'navi, num']
+  l: [QWERTY, 'navi, num', '`\f & navi', 'num, navi']
 - p: [22, 23]
   k: BACKSPACE
-  l: [QWERTY]
+  l: [QWERTY, 'navi, num', 'num, navi', '`\f & navi']
 - p: [21, 22]
   k: CAPSLOCK
   l: [QWERTY]
