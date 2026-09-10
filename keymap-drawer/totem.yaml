@@ -91,7 +91,7 @@ layers:
   - '*'
   - {t: PG DN, h: Ctl+END}
   - LEFT
-  - DOWN
+  - LEFT SHIFT
   - RIGHT
   - {t: ▽, type: trans}
   - '-'
