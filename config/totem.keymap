@@ -529,10 +529,10 @@
         navi_num {
             label = "navi, num";
             bindings = <
-        &ht LC(HOME) PG_UP  &kp HOME  &kp UP         &kp END    &trans    &kp PLUS   &kp N7        &kp N8         &kp N9  &kp ASTERISK
-        &ht LC(END) PG_DN   &kp LEFT  &kp DOWN       &kp RIGHT  &trans    &kp MINUS  &kp N4        &kp N5         &kp N6  &kp SLASH
-&trans  &trans              &trans    &kp LS(ENTER)  &trans     &trans    &kp EQUAL  &kp N1        &kp N2         &kp N3  &kp COMMA     &kp LSHIFT
-                                      &trans         &trans     &trans    &trans     &kp NUMBER_0  &t_dot_dt_to0
+        &ht LC(HOME) PG_UP  &kp HOME  &kp UP          &kp END    &trans    &kp PLUS   &kp N7        &kp N8         &kp N9  &kp ASTERISK
+        &ht LC(END) PG_DN   &kp LEFT  &kp LEFT_SHIFT  &kp RIGHT  &trans    &kp MINUS  &kp N4        &kp N5         &kp N6  &kp SLASH
+&trans  &trans              &trans    &kp LS(ENTER)   &trans     &trans    &kp EQUAL  &kp N1        &kp N2         &kp N3  &kp COMMA     &kp LSHIFT
+                                      &trans          &trans     &trans    &trans     &kp NUMBER_0  &t_dot_dt_to0
             >;
         };
 
