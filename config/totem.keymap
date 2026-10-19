@@ -531,6 +531,12 @@
             key-positions = <22 24>;
             layers = <0>;
         };
+
+        R_p {
+            bindings = <&kp P>;
+            key-positions = <27 18>;
+            layers = <0>;
+        };
     };
 
     keymap {
