@@ -37,7 +37,7 @@ layers:
   - LALT
   - {t: SPACE, h: '`\f & navi'}
   - {t: SPACE, h: LEFT SHIFT}
-  - '&mo_NumNav_dt_to_NavNum'
+  - RIGHT ALT
   - '&mo_NumNav_dt_to_NavNum'
   '`\f & navi':
   - '`'
@@ -340,4 +340,19 @@ combos:
   l: [QWERTY]
 - p: [2, 1]
   k: Sft+E
+  l: [QWERTY]
+- p: [6, 8]
+  k: V
+  l: [QWERTY]
+- p: [18, 16]
+  k: C
+  l: [QWERTY]
+- p: [27, 29]
+  k: Z
+  l: [QWERTY]
+- p: [1, 3]
+  k: Sft+W
+  l: [QWERTY]
+- p: [22, 24]
+  k: Sft+Q
   l: [QWERTY]
