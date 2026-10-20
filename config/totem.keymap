@@ -333,12 +333,6 @@
             layers = <0>;
         };
 
-        ralt_combo {
-            bindings = <&kp RIGHT_ALT>;
-            key-positions = <16 18>;
-            layers = <0>;
-        };
-
         osl_combo {
             bindings = <&sl 4>;
             key-positions = <11 12 13>;
