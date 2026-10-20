@@ -480,7 +480,7 @@
 
         question_mark {
             bindings = <&kp QUESTION>;
-            key-positions = <18 28>;
+            key-positions = <18 27>;
             layers = <0>;
         };
 
@@ -516,19 +516,31 @@
 
         sft_w {
             bindings = <&kp LS(W)>;
-            key-positions = <1 3>;
+            key-positions = <11 23>;
             layers = <0>;
         };
 
         sft_q {
             bindings = <&kp LS(Q)>;
-            key-positions = <22 24>;
+            key-positions = <24 12>;
             layers = <0>;
         };
 
         R_p {
             bindings = <&kp P>;
             key-positions = <18 17>;
+            layers = <0>;
+        };
+
+        sft_p {
+            bindings = <&kp LS(P)>;
+            key-positions = <27 17>;
+            layers = <0>;
+        };
+
+        sft_o {
+            bindings = <&kp LS(O)>;
+            key-positions = <18 28>;
             layers = <0>;
         };
     };
