@@ -259,9 +259,6 @@ combos:
 - p: [0, 1]
   k: ESCAPE
   l: [QWERTY]
-- p: [16, 18]
-  k: RIGHT ALT
-  l: [QWERTY]
 - p: [11, 12, 13]
   k: {t: OSL, h: sticky}
   l: [QWERTY]
