@@ -339,13 +339,13 @@ combos:
   k: Sft+E
   l: [QWERTY]
 - p: [6, 8]
-  k: V
+  k: Sft+O
   l: [QWERTY]
 - p: [18, 16]
   k: C
   l: [QWERTY]
 - p: [27, 29]
-  k: Z
+  k: Sft+P
   l: [QWERTY]
 - p: [11, 23]
   k: Sft+W
@@ -357,8 +357,8 @@ combos:
   k: P
   l: [QWERTY]
 - p: [27, 17]
-  k: Sft+P
+  k: V
   l: [QWERTY]
 - p: [18, 28]
-  k: Sft+O
+  k: Z
   l: [QWERTY]
