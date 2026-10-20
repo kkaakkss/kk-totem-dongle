@@ -496,8 +496,8 @@
             layers = <0>;
         };
 
-        R_v {
-            bindings = <&kp V>;
+        Sft_o {
+            bindings = <&kp LS(O)>;
             key-positions = <6 8>;
             layers = <0>;
         };
@@ -508,8 +508,8 @@
             layers = <0>;
         };
 
-        R_z {
-            bindings = <&kp Z>;
+        Sft_p {
+            bindings = <&kp LS(P)>;
             key-positions = <27 29>;
             layers = <0>;
         };
@@ -532,14 +532,14 @@
             layers = <0>;
         };
 
-        sft_p {
-            bindings = <&kp LS(P)>;
+        R_v2 {
+            bindings = <&kp V>;
             key-positions = <27 17>;
             layers = <0>;
         };
 
-        sft_o {
-            bindings = <&kp LS(O)>;
+        R_z2 {
+            bindings = <&kp Z>;
             key-positions = <18 28>;
             layers = <0>;
         };
