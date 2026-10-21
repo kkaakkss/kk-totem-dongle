@@ -481,7 +481,7 @@
 
         question_mark {
             bindings = <&kp QUESTION>;
-            key-positions = <18 27>;
+            key-positions = <17 27>;
             layers = <0>;
         };
 
@@ -535,7 +535,7 @@
 
         R_v2 {
             bindings = <&kp V>;
-            key-positions = <27 17>;
+            key-positions = <18 27>;
             layers = <0>;
         };
 
