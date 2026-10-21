@@ -464,6 +464,7 @@
         ssang_siut {
             bindings = <&kp LS(T)>;
             key-positions = <12 11>;
+            layers = <0>;
         };
 
         dtap_to_l0 {
