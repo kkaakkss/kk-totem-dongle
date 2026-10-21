@@ -330,7 +330,7 @@ combos:
 - p: [1, 2, 3]
   k: F2
   l: [QWERTY, 'num, navi']
-- p: [18, 27]
+- p: [17, 27]
   k: '?'
   l: [QWERTY]
 - p: [2, 3]
@@ -357,7 +357,7 @@ combos:
 - p: [18, 17]
   k: P
   l: [QWERTY]
-- p: [27, 17]
+- p: [18, 27]
   k: V
   l: [QWERTY]
 - p: [18, 28]
