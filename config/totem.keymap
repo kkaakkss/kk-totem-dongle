@@ -517,13 +517,13 @@
 
         sft_w {
             bindings = <&kp LS(W)>;
-            key-positions = <18 28>;
+            key-positions = <11 23>;
             layers = <0>;
         };
 
         sft_q {
             bindings = <&kp LS(Q)>;
-            key-positions = <18 27>;
+            key-positions = <28 24 12>;
             layers = <0>;
         };
 
@@ -542,6 +542,12 @@
         R_z2 {
             bindings = <&kp Z>;
             key-positions = <22 24>;
+            layers = <0>;
+        };
+
+        R_p2 {
+            bindings = <&kp P>;
+            key-positions = <18 16>;
             layers = <0>;
         };
     };
