@@ -348,10 +348,10 @@ combos:
 - p: [27, 29]
   k: Sft+P
   l: [QWERTY]
-- p: [18, 28]
+- p: [11, 23]
   k: Sft+W
   l: [QWERTY]
-- p: [18, 27]
+- p: [28, 24, 12]
   k: Sft+Q
   l: [QWERTY]
 - p: [18, 17]
@@ -362,4 +362,7 @@ combos:
   l: [QWERTY]
 - p: [22, 24]
   k: Z
+  l: [QWERTY]
+- p: [18, 16]
+  k: P
   l: [QWERTY]
