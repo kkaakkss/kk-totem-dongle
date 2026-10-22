@@ -319,7 +319,7 @@ combos:
   k: \
   l: [QWERTY]
 - p: [26, 27]
-  k: '='
+  k: B
   l: [QWERTY]
 - p: [12, 11]
   k: Sft+T
@@ -365,4 +365,7 @@ combos:
   l: [QWERTY]
 - p: [18, 16]
   k: P
+  l: [QWERTY]
+- p: [27, 18]
+  k: '?'
   l: [QWERTY]
