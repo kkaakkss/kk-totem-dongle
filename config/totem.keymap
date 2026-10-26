@@ -389,7 +389,7 @@
 
         dtap_to_l2 {
             bindings = <&mo_dtap_to_NavNum>;
-            key-positions = <11 24>;
+            key-positions = <11 13>;
             layers = <0>;
         };
 
@@ -469,7 +469,7 @@
 
         dtap_to_l0 {
             bindings = <&to 0>;
-            key-positions = <11 24>;
+            key-positions = <11 13>;
             layers = <2>;
         };
 
@@ -505,7 +505,7 @@
 
         R_c {
             bindings = <&kp C>;
-            key-positions = <13 11>;
+            key-positions = <11 24>;
             layers = <0>;
         };
 
