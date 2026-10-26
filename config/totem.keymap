@@ -523,7 +523,7 @@
 
         sft_q {
             bindings = <&kp LS(Q)>;
-            key-positions = <28 24 12>;
+            key-positions = <24 12>;
             layers = <0>;
         };
 
