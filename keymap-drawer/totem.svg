@@ -354,10 +354,10 @@ path.combo {
 <text x="733" y="143" class="combo tap">&#x27;</text>
 </g>
 <g class="combo combopos-13">
-<path d="M210,143 l-43,-18" class="combo"/>
-<path d="M210,143 l43,18" class="combo"/>
-<rect rx="6" ry="6" x="196" y="130" width="28" height="26" class="combo"/>
-<text x="210" y="143" class="combo tap"><tspan style="font-size: 64%">&amp;mo_dtap_t…</tspan></text>
+<path d="M210,115 l-42,2" class="combo"/>
+<path d="M210,115 l42,-2" class="combo"/>
+<rect rx="6" ry="6" x="196" y="102" width="28" height="26" class="combo"/>
+<text x="210" y="115" class="combo tap"><tspan style="font-size: 64%">&amp;mo_dtap_t…</tspan></text>
 </g>
 <g class="combo combopos-14">
 <rect rx="6" ry="6" x="287" y="47" width="28" height="26" class="combo"/>
@@ -422,10 +422,10 @@ path.combo {
 <text x="643" y="59" class="combo tap">Sft+O</text>
 </g>
 <g class="combo combopos-28">
-<path d="M210,115 l42,-2" class="combo"/>
-<path d="M210,115 l-42,2" class="combo"/>
-<rect rx="6" ry="6" x="196" y="102" width="28" height="26" class="combo"/>
-<text x="210" y="115" class="combo tap">C</text>
+<path d="M210,143 l-43,-18" class="combo"/>
+<path d="M210,143 l43,18" class="combo"/>
+<rect rx="6" ry="6" x="196" y="130" width="28" height="26" class="combo"/>
+<text x="210" y="143" class="combo tap">C</text>
 </g>
 <g class="combo combopos-29">
 <path d="M639,171 l-40,-2" class="combo"/>
@@ -920,12 +920,12 @@ path.combo {
 </text>
 </g>
 <g class="combo combopos-13">
-<path d="M210,143 l-43,-18" class="combo"/>
-<path d="M210,143 l43,18" class="combo"/>
-<rect rx="6" ry="6" x="196" y="130" width="28" height="26" class="combo"/>
+<path d="M210,115 l-42,2" class="combo"/>
+<path d="M210,115 l42,-2" class="combo"/>
+<rect rx="6" ry="6" x="196" y="102" width="28" height="26" class="combo"/>
 <a href="#QWERTY">
-<text x="210" y="143" class="combo tap layer-activator">QWERTY</text>
-</a><text x="210" y="154" class="combo hold">toggle</text>
+<text x="210" y="115" class="combo tap layer-activator">QWERTY</text>
+</a><text x="210" y="126" class="combo hold">toggle</text>
 </g>
 </g>
 </g>

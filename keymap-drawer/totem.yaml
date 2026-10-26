@@ -286,7 +286,7 @@ combos:
 - p: [18, 19]
   k: ''''
   l: [QWERTY]
-- p: [11, 24]
+- p: [11, 13]
   k: '&mo_dtap_to_NavNum'
   l: [QWERTY]
 - p: [3, 4]
@@ -324,7 +324,7 @@ combos:
 - p: [12, 11]
   k: Sft+T
   l: [QWERTY]
-- p: [11, 24]
+- p: [11, 13]
   k: {t: QWERTY, h: toggle}
   l: ['navi, num']
 - p: [1, 2, 3]
@@ -342,7 +342,7 @@ combos:
 - p: [6, 8]
   k: Sft+O
   l: [QWERTY]
-- p: [13, 11]
+- p: [11, 24]
   k: C
   l: [QWERTY]
 - p: [27, 29]
