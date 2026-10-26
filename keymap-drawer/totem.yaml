@@ -351,7 +351,7 @@ combos:
 - p: [11, 23]
   k: Sft+W
   l: [QWERTY]
-- p: [28, 24, 12]
+- p: [24, 12]
   k: Sft+Q
   l: [QWERTY]
 - p: [18, 17]
